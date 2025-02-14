@@ -1,21 +1,46 @@
 import React from "react";
 import { Link } from "react-router";
 
-const keywords = [
-  "Wet n joy ticket price",
-  "Wet and joy ticket price",
-  "Great escape ticket price",
-  "Magic mountain amusement park price",
-  "Water kingdom ticket price",
-  "Wonderla bangalore",
-  "Wonderla kochi",
-  "Best waterpark in mumbai",
-  "Best waterparks in and around mumbai",
-  "Sai teerth",
-  "Shangrila waterpark ticket price",
-  "Smaash",
-  "Essel world",
-];
+const keywords = {
+  "top 10": [
+      "Wet n joy ticket price",
+      "Wet and joy ticket price",
+      "Great escape ticket price",
+      "Magic mountain amusement park price",
+      "Water kingdom ticket price",
+      "Wonderla bangalore",
+      "Wonderla kochi",
+      "Best waterpark in mumbai",
+      "Best waterparks in and around mumbai",
+      "Sai teerth",
+      "Shangrila waterpark ticket price",
+      "Smaash",
+      "Essel world",
+      "Global broker",
+      "Global trading platform",
+      "Dynamic trading platforms",
+      "World leading metatrader 5 platform",
+      "Indices trading platform in UAE",
+      "Indices trading platform UAE",
+      "Advanced futures trading platform",
+      "CFD global trading",
+      "Online metatrader 5 trading in UAE",
+      "CFD global app",
+      "Metatrader 5 for beginners",
+      "Limitless forex"
+    ],
+    "top 100": [
+      "Online trading",
+      "Trading online",
+      "Multi-assets global broker",
+      "Download and install metatrader 5",
+      "Metatrader 5 multi-asset platform",
+      "Best trade platform in UAE",
+      "Online trading Dubai",
+      "Dubai online trading platform",
+      "How to use MT5",
+    ]
+  }
 
 const projects = [
   {
@@ -55,19 +80,27 @@ export default function Home() {
 
       {/* SEO Achievements */}
       <section className="mb-16">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-4">SEO Achievements</h2>
-        <p className="text-lg text-gray-600 mb-6">Successfully ranked keywords for various amusement parks and attractions.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {keywords.map((keyword, index) => (
-            <div
-              key={index}
-              className="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-l-4 border-blue-500"
-            >
-              <p className="text-gray-800 text-lg font-medium">{keyword}</p>
-            </div>
-          ))}
+      <h2 className="text-4xl font-semibold text-gray-800 mb-4">SEO Achievements</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        Successfully ranked keywords for various categories.
+      </p>
+      
+      {Object.entries(keywords).map(([category, words]) => (
+        <div key={category} className="mb-8">
+          <h3 className="text-2xl font-bold text-blue-600 mb-4 capitalize">{category}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {words.map((keyword, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-l-4 border-blue-500"
+              >
+                <p className="text-gray-800 text-lg font-medium">{keyword}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </section>
+      ))}
+    </section>
 
       {/* NGO Projects */}
       <section className="mb-16">
