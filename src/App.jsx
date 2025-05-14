@@ -2,6 +2,7 @@ import { Route, Routes, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import SocialMedia from "./pages/SocialMedia";
 import EmailMarketing from "./pages/EmailMarketing";
+import Blogs from "./pages/Blogs";
 
 export default function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/social-media" element={<SocialMedia />} />
           <Route path="/email-marketing" element={<EmailMarketing />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
 
         <a
