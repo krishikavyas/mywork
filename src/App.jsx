@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/email-marketing" element={<EmailMarketing />} />
           <Route path="/blogs" element={<Blogs />} />
         </Routes>
-
+{/* 
         <a
           href="https://krishikavyas.site" 
           target="_blank"
@@ -37,7 +37,7 @@ export default function App() {
           className="fixed bottom-6 left-6 bg-blue-600 text-white font-semibold px-5 py-3 rounded-full shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl"
         >
           View My Portfolio
-        </a>
+        </a> */}
 
       </main>
     </div>
